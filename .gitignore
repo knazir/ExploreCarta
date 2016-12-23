@@ -1,0 +1,10 @@
+# Compiled files
+Debug/
+
+# WebStorm
+.idea
+.editorconfig
+.gitattributes
+
+# OSX
+.DS_Store/

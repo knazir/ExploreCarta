@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "ExploreTeachers",
+  "version": "0.1",
+
+  "description": "Allows you to directly navigate from Stanford's ExploreCourses search results to the corresponding page on Carta.",
+  "author": "Kashif Nazir",
+
+  "web_accessible_resources": ["res/icon.png"],
+
+  "browser_action": {
+    "default_icon": "res/icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://explorecourses.stanford.edu/search*",
+        "https://explorecourses.stanford.edu/search*"
+      ],
+      "js": ["lib/jquery-3.1.1.min.js", "content.js"],
+      "css": ["main.css"]
+    }
+  ]
+}
