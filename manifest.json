@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "name": "ExploreTeachers",
-  "version": "0.1",
+  "version": "0.11",
 
-  "description": "Allows you to directly navigate from Stanford's ExploreCourses search results to the corresponding page on Carta.",
+  "description": "Directly navigate to Carta from ExploreCourses.",
   "author": "Kashif Nazir",
 
   "web_accessible_resources": ["res/icon.png"],

@@ -3,8 +3,7 @@ var ICON_URL    = chrome.extension.getURL("res/icon.png"),
     CARTA_POST  = '/1174',
     result      = 1;
 
-var generateButton = function(courseCode) {
-    console.log('Generating button for course: ' + courseCode);
+var generateButton = function() {
     return '<span class="etButton"><img id="etResult' + result + '" src="' + ICON_URL + '"></span>';
 };
 
@@ -14,7 +13,7 @@ $('#searchResults').find('div').each(function() {
             courseCode  = courseInfo.find('.courseNumber').html().slice(0, -1).replace(/\s+/g, ''),
             courseTitle = courseInfo.find('.courseTitle');
 
-        courseTitle.after(generateButton(courseCode));
+        courseTitle.after(generateButton());
         $('#etResult' + (result++)).click(function() {
             window.open(CARTA_PRE + courseCode + CARTA_POST);
         });
