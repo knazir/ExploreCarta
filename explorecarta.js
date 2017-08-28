@@ -4,7 +4,6 @@ const config = {
   ICON_URL: chrome.extension.getURL("res/icon.png"),
   CARTA_URL_PREFIX: "https://carta.stanford.edu/course",
   TERMS_REGEX: /Terms:\s+([^|]+\|)/g,
-  DEFAULT_QUARTER_CODE: 1174,
   USE_QUARTER_CODE: true
 };
 
@@ -67,7 +66,7 @@ function getCurrentQuarterCodeSuffix() {
 
 function getQuarterCode(termsOffered) {
   if (termsOffered.filter(term => Object.keys(quarters).indexOf(term) !== -1).length === 0) {
-    return config.DEFAULT_QUARTER_CODE;
+    return null;
   }
 
   let currentYear = new Date().getYear() + 1;
