@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "ExploreTeachers",
-  "version": "0.11",
+  "name": "ExploreCarta",
+  "version": "1.0",
 
   "description": "Directly navigate to Carta from ExploreCourses.",
   "author": "Kashif Nazir",
@@ -18,7 +18,7 @@
         "http://explorecourses.stanford.edu/search*",
         "https://explorecourses.stanford.edu/search*"
       ],
-      "js": ["lib/jquery-3.1.1.min.js", "content.js"],
+      "js": ["plugin.js"],
       "css": ["main.css"]
     }
   ]

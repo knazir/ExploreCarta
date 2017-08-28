@@ -1,9 +1,9 @@
-.etButton {
+.ec-result {
     font-size: 16px;
     margin-left: 5px;
 }
 
-.etButton img {
+.ec-icon {
     max-height: 18px;
     max-width: 18px;
     cursor: pointer;
