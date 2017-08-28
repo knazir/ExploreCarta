@@ -4,7 +4,8 @@ const config = {
   ICON_URL: chrome.extension.getURL("res/icon.png"),
   CARTA_URL_PREFIX: "https://carta.stanford.edu/course",
   TERMS_REGEX: /Terms:\s+([^|]+\|)/g,
-  DEFAULT_QUARTER_CODE: 1174
+  DEFAULT_QUARTER_CODE: 1174,
+  USE_QUARTER_CODE: true
 };
 
 const quarters = {
@@ -97,9 +98,12 @@ courseResults.forEach(result => {
   const courseTitle = courseName.querySelector(".courseTitle");
 
   const termsOffered = getTermsOffered(courseInfo);
-  const quarterCode = getQuarterCode(termsOffered);
+  const quarterCode = config.USE_QUARTER_CODE ? getQuarterCode(termsOffered) : null;
 
-  const courseLink = `${config.CARTA_URL_PREFIX}/${courseCode}/${quarterCode}`;
+  let courseLink = `${config.CARTA_URL_PREFIX}/${courseCode}`;
+  if (quarterCode) {
+    courseLink += `/${quarterCode}`;
+  }
   const courseButton = createButtonDomNode(courseLink);
   courseTitle.appendChild(courseButton);
 });

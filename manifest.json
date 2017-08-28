@@ -18,8 +18,8 @@
         "http://explorecourses.stanford.edu/search*",
         "https://explorecourses.stanford.edu/search*"
       ],
-      "js": ["plugin.js"],
-      "css": ["main.css"]
+      "js": ["explorecarta.js"],
+      "css": ["style.css"]
     }
   ]
 }
