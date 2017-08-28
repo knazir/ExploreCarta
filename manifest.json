@@ -3,7 +3,7 @@
   "name": "ExploreCarta",
   "version": "1.0",
 
-  "description": "Directly navigate to Carta from ExploreCourses.",
+  "description": "Directly navigate to Stanford's Carta from ExploreCourses.",
   "author": "Kashif Nazir",
 
   "web_accessible_resources": ["res/icon.png"],
